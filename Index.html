@@ -1,19 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Clean Bodies — Toxin-free wellness products. Non-toxic skincare, raw almonds, and detox essentials." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
-    <title>Clean Bodies — Toxin-Free Wellness</title>
-    <script type="module" crossorigin src="/assets/index-BrL0geUo.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B43FAFmD.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Bodies — Toxin-Free Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#8fa88b;--cream:#f5f0e8;--forest:#3d5a3e;--terracotta:#c67a5c;--text:#2c2c2c;--heading:'Playfair Display',Georgia,serif;--body:Inter,sans-serif}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--body);color:var(--text);line-height:1.6;background:#fafaf8}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+header{background:white;border-bottom:1px solid #e8dcd1;position:sticky;top:0;z-index:100}.nav{display:flex;justify-content:space-between;align-items:center;height:72px}.nav-brand{font-family:var(--heading);font-size:1.5rem;color:var(--forest);text-decoration:none}.nav-links{display:flex;gap:24px}.nav-links a{color:var(--text);text-decoration:none;font-size:.9375rem}
+.hero{background:linear-gradient(135deg,var(--cream),white);padding:96px 0}.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.hero h1{font-family:var(--heading);font-size:3rem;color:var(--forest);margin-bottom:24px}.hero p{font-size:1.125rem;color:#5a5a5a;margin-bottom:32px}
+.btn{display:inline-block;padding:16px 24px;border-radius:8px;font-weight:500;text-decoration:none;margin:4px}.btn-primary{background:var(--sage);color:white}.btn-secondary{border:2px solid var(--forest);color:var(--forest)}
+.section{padding:96px 0}.section-title{font-family:var(--heading);font-size:2.25rem;color:var(--forest);text-align:center;margin-bottom:48px}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}.card{background:var(--cream);border-radius:16px;padding:24px}.card-title{font-family:var(--heading);font-size:1.25rem;color:var(--forest)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}.feature{text-align:center;padding:32px}
+footer{background:var(--forest);color:white;padding:64px 0 24px}
+@media(max-width:768px){.hero-content,.grid,.features,.footer-grid{grid-template-columns:1fr}.hero h1{font-size:2.25rem}}
+</style>
+</head>
+<body>
+<header><div class="container"><nav class="nav"><a href="#" class="nav-brand">Clean Bodies</a><div class="nav-links"><a href="#">Home</a><a href="#shop">Shop</a><a href="#recipes">Recipes</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav></div></header>
+<section class="hero"><div class="container"><div class="hero-content"><div><h1>Clean Living,<br>Naturally Yours</h1><p>Toxin-free wellness products curated by a certified detoxification specialist. From non-toxic skincare to raw almonds for homemade almond milk.</p><a href="#shop" class="btn btn-primary">Shop Now</a> <a href="#about" class="btn btn-secondary">Our Story</a></div><div style="text-align:center;font-size:4rem">🌿</div></div></div></section>
+<section class="section" id="shop"><div class="container"><h2 class="section-title">Our Products</h2><div class="grid">
+<div class="card"><span style="font-size:2rem">🧴</span><h3 class="card-title">Daily Detox Face Serum</h3><p>$38.00</p></div>
+<div class="card"><span style="font-size:2rem">🧴</span><h3 class="card-title">Purifying Clay Mask</h3><p>$32.00</p></div>
+<div class="card"><span style="font-size:2rem">🧴</span><h3 class="card-title">Clean Body Butter</h3><p>$28.00</p></div>
+<div class="card"><span style="font-size:2rem">🥜</span><h3 class="card-title">Raw Organic Almonds (2lb)</h3><p>$16.00</p></div>
+<div class="card"><span style="font-size:2rem">🥜</span><h3 class="card-title">Raw Organic Almonds (5lb)</h3><p>$34.00</p></div>
+<div class="card"><span style="font-size:2rem">🌿</span><h3 class="card-title">7-Day Gentle Detox Kit</h3><p>$64.00</p></div>
+<div class="card"><span style="font-size:2rem">🌿</span><h3 class="card-title">Detox Support Tea Blend</h3><p>$18.00</p></div>
+</div></div></section>
+<section style="background:var(--cream);padding:64px 0"><div class="container"><h2 class="section-title">Why Choose Clean Bodies?</h2><div class="features"><div class="feature"><h3>✓ Certified & Curated</h3><p style="color:#5a5a5a">Vetted by a certified detox specialist</p></div><div class="feature"><h3>🌱 Toxin-Free Promise</h3><p style="color:#5a5a5a">No hidden toxins or additives</p></div><div class="feature"><h3>👶 Family-First</h3><p style="color:#5a5a5a">Supporting the whole family's wellness</p></div></div></div></section>
+<section class="section" id="recipes"><div class="container"><h2 class="section-title">Homemade Almond Milk</h2><p style="text-align:center;max-width:600px;margin:0 auto 32px">Creamier than dairy and safer for little ones. Simple steps to make nutrient-rich almond milk at home.</p><div class="grid"><div class="card"><h3 class="card-title">Ingredients</h3><p>1 cup raw organic almonds<br>4 cups filtered water<br>Pinch of sea salt</p></div><div class="card"><h3 class="card-title">Instructions</h3><p>Soak almonds 8-12 hrs. Drain, rinse, blend with water 60 sec. Strain through nut milk bag. Refrigerate up to 4 days.</p></div><div class="card"><h3 class="card-title">Pro Tip</h3><p>Save the pulp! Dry in a low oven and blitz into almond flour for baking.</p></div></div></div></section>
+<section style="background:var(--cream);padding:64px 0" id="about"><div class="container"><h2 class="section-title">Our Story</h2><p style="text-align:center;max-width:700px;margin:0 auto">Clean Bodies was founded from a simple belief: what you put on and in your body matters. Every product is something we personally use and stand behind.</p><p style="text-align:center;font-family:Caveat,cursive;font-size:1.5rem;color:#8b7355;margin-top:24px">"We only stock what we personally trust for our own families."</p></div></section>
+<section class="section" id="contact"><div class="container"><h2 class="section-title">Get in Touch</h2><p style="text-align:center;margin-bottom:32px">Have a question? Want to place an order? We'd love to hear from you.</p><p style="text-align:center">📧 hello@cleanbodies.com</p></div></section>
+<footer><div class="container"><p>© 2025 Clean Bodies. All rights reserved.</p></div></footer>
+</body>
 </html>
+
