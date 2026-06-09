@@ -1,39 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Bodies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;color:#2c2c2c;background:#fafaf8;line-height:1.7}.container{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:#3d5a3e}
+nav{background:white;border-bottom:1px solid #e8dcd1;position:sticky;top:0;z-index:100;padding:16px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav .brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#3d5a3e;text-decoration:none}
+nav a{color:#2c2c2c;text-decoration:none;font-size:.9375rem;margin-left:24px}
+.hero{background:#f5f0e8;padding:80px 0;text-align:center}.hero h1{font-size:2.75rem;margin-bottom:16px}
+.hero p{color:#5a5a5a;max-width:700px;margin:0 auto 32px;font-size:1.125rem}
+.btn{display:inline-block;padding:16px 32px;border-radius:8px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-size:1rem}
+.btn-primary{background:#8fa88b;color:white}.btn-cta{background:#c67a5c;color:white;font-size:1.125rem;padding:20px 40px}
+.btn-amazon{background:#ff9900;color:white;display:block;padding:12px;border-radius:8px;text-align:center;text-decoration:none;font-size:.9375rem}
+.story{background:white;padding:80px 0}.story h2,.products h2,.recipe h2,.detox h2{font-size:2rem;text-align:center;margin-bottom:32px}
+.story p{color:#5a5a5a;max-width:800px;margin:0 auto 20px;font-size:1.0625rem}
+.cta-section{background:#3d5a3e;padding:80px 0;text-align:center;color:white}
+.cta-section h2{color:white;font-size:2.25rem;margin-bottom:16px}
+.cta-section p{color:rgba(255,255,255,.85);margin-bottom:32px}
+.products{background:#f5f0e8;padding:80px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding:0 24px}
+.card{background:white;border-radius:12px;padding:28px}.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{color:#5a5a5a;font-size:.9375rem;margin-bottom:20px}
+.features{padding:64px 0;text-align:center}.features .grid{grid-template-columns:repeat(3,1fr)}
+.features h3{font-family:Inter,sans-serif;font-size:1.125rem;color:#3d5a3e;margin-bottom:8px}
+.features p{color:#5a5a5a;font-size:.9375rem}
+.recipe{background:white;padding:80px 0}.recipe-card{background:#f5f0e8;border-radius:12px;padding:40px;max-width:800px;margin:0 auto}
+.recipe-details{display:flex;gap:24px;justify-content:center;padding:16px;background:white;border-radius:8px;margin-bottom:24px;text-align:center}
+.recipe-steps{padding-left:20px;margin:16px 0}.recipe-steps li{color:#5a5a5a;margin-bottom:8px}
+.detox{background:#f5f0e8;padding:80px 0}.form-card{background:white;border-radius:12px;padding:40px;max-width:600px;margin:0 auto}
+.form-group{margin-bottom:20px}.form-group label{display:block;font-weight:500;margin-bottom:6px}
+.form-group input,.form-group textarea{width:100%;padding:14px;border:1px solid #e8dcd1;border-radius:8px;font-family:Inter,sans-serif;font-size:1rem}
+.form-group textarea{min-height:100px}
+footer{background:#3d5a3e;color:white;padding:48px 0 24px;text-align:center}footer a{color:rgba(255,255,255,.7);text-decoration:none;margin:0 12px}footer p{color:rgba(255,255,255,.5);font-size:.875rem;margin-top:16px}
+@media(max-width:768px){.hero h1{font-size:2rem}.grid,.features .grid{grid-template-columns:1fr}.recipe-details{flex-direction:column}}
+</style>
+</head>
+<body>
 
+<nav><div class="container"><a href="#" class="brand">Clean Bodies</a><div><a href="#story">About</a><a href="#products">Shop</a><a href="#detox">Detox Plans</a><a href="#contact">Contact</a></div></div></nav>
 
-input type="email" name="email" placeholder="your@email.com" required></div>
+<section class="hero"><div class="container"><h1>Clean Living, Naturally Yours</h1><p>Toxin-free wellness products and personalized detox guidance — curated by a certified detoxification specialist.</p><a href="#products" class="btn btn-primary">Shop My Picks</a></div></section>
+
+<section class="story" id="story"><div class="container"><h2>Our Story</h2><p>Clean Bodies was founded in 2012 from a deeply personal health journey. After spending more than a decade struggling with chronic pain and persistent acne, I was determined to find answers beyond temporary solutions.</p><p>Through two years of intensive study in Nutritional Sciences and Metabolic Detoxification, I gained the knowledge and tools needed to transform my own health.</p><p>Over the past 15 years, I have had the privilege of consulting with individuals and families, helping them make practical, sustainable changes that support lasting wellness.</p><p>After taking time away to welcome and raise my son, I am excited to return to serving others through Clean Bodies.</p><p style="text-align:center;color:#8b7355;font-family:Caveat,cursive;font-size:1.375rem;margin-top:32px">Because feeling your best shouldn't be complicated — or costly.</p><p style="text-align:center;margin-top:16px;color:#8b7355;font-family:Caveat,cursive;font-size:1.25rem">— Lauren Eisman</p></div></section>
+
+<section class="cta-section"><div class="container"><h2>Are You Ready To Change Your Life?</h2><p>Start with my personal product recommendations or try my homemade almond milk recipe.</p><a href="#products" class="btn btn-cta">Yes, Let's Go! →</a></div></section>
+
+<section class="products" id="products"><div class="container"><h2>My Personal Picks</h2></div><div class="grid">
+<div class="card"><h3>Raw Almonds (3 lbs)</h3><p>Perfect for homemade almond milk.</p><a href="https://amzn.to/4g51OVZ" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Beef Tallow Moisturizer</h3><p>Nourishing, non-toxic skincare.</p><a href="https://amzn.to/4dSQP0C" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Oxygenated Milk Thistle</h3><p>Supports liver detoxification.</p><a href="https://www.amazon.com/dp/B0G62WB1F6/ref=cm_sw_r_as_gl_api_gl_i_EXDS00G1RS5SYEA6TNWW?linkCode=ml1&tag=cleanbodies10-20&linkId=42e07df5bad0769b25115c597cb65927" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Dental Tape</h3><p>Non-toxic dental care.</p><a href="https://www.amazon.com/dp/B00FQGNI8O/ref=cm_sw_r_as_gl_api_gl_i_ARASSGBK3NQJ57TGBD7V?linkCode=ml1&tag=cleanbodies10-20&linkId=9f7073ca12ff1959c8949c184ce58853" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Essence Alkaline Water</h3><p>Optimal hydration.</p><a href="https://amzn.to/3QcOEf4" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Vibration Plate</h3><p>Lymphatic drainage & detox.</p><a href="https://amzn.to/4es8Z9v" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+<div class="card"><h3>Nut Milk Bag</h3><p>Essential for almond milk.</p><a href="https://amzn.to/4osCeMX" target="_blank" class="btn-amazon">Buy on Amazon</a></div>
+</div></section>
+
+<section class="features"><div class="container"><div class="grid"><div><h3>Certified & Curated</h3><p>Vetted by a detox specialist</p></div><div><h3>Toxin-Free Promise</h3><p>No harmful additives</p></div><div><h3>Family-First</h3><p>Whole family wellness</p></div></div></div></section>
+
+<section class="recipe" id="recipe"><div class="container"><h2>Homemade Almond Milk</h2><div class="recipe-card"><div class="recipe-details"><div><strong>Prep:</strong> 10 min</div><div><strong>Soak:</strong> 8-10 hrs</div><div><strong>Yields:</strong> 4 cups</div></div><h3>Ingredients</h3><ul class="recipe-steps"><li>2 cups raw almonds</li><li>Filtered water</li><li>4 cups alkaline water</li><li>1 tsp salt, 1 tsp cinnamon</li><li>1 tbsp Agave or Honey</li></ul><h3 style="margin-top:24px">Instructions</h3><ol class="recipe-steps"><li>Soak almonds 8-10 hrs, drain, rinse</li><li>Blend with 4 cups alkaline water for 1 min</li><li>Strain through nut milk bag</li><li>Add salt, cinnamon, agave, blend again</li></ol></div></div></section>
+
+<section class="detox" id="detox"><div class="container"><h2>Customized Detox Plan</h2><p style="text-align:center;color:#5a5a5a;margin-bottom:48px">Tell me about yourself and I'll create a plan tailored to your goals.</p><div class="form-card"><form action="mailto:laureneisman@gmail.com" method="post" enctype="text/plain">
+<div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your name" required></div>
+<div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
 <div class="form-group"><label>Age</label><input type="text" name="age" placeholder="Your age"></div>
 <div class="form-group"><label>Weight</label><input type="text" name="weight" placeholder="Current weight"></div>
-<div class="form-group"><label>Current Diet</label><textarea name="diet" placeholder="Describe your current eating habits... What does a typical day look like?" required></textarea></div>
-<div class="form-group"><label>Your End Goal</label><textarea name="goal" placeholder="What do you want to achieve? More energy? Clearer skin? Weight loss? Better digestion?" required></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;text-align:center">Send My Info →</button>
-</form>
-</div>
-</div>
-</section>
+<div class="form-group"><label>Current Diet</label><textarea name="diet" placeholder="What does a typical day look like?" required></textarea></div>
+<div class="form-group"><label>Your Goal</label><textarea name="goal" placeholder="What do you want to achieve?" required></textarea></div>
+<button type="submit" class="btn btn-primary" style="width:100%;text-align:center">Send My Info →</button>
+</form></div></div></section>
 
-<section style="background:#3d5a3e;padding:48px 0;text-align:center;color:white" id="contact">
-<div class="container">
-<h2 style="color:white;font-size:1.75rem;margin-bottom:12px">Get in Touch</h2>
-<p style="color:rgba(255,255,255,.85);margin-bottom:4px">Email: laureneisman@gmail.com</p>
-<p style="color:rgba(255,255,255,.85)">Phone: #3108975683</p>
-</div>
-</section>
+<section style="background:#3d5a3e;padding:48px 0;text-align:center;color:white" id="contact"><div class="container"><h2 style="color:white;font-size:1.75rem;margin-bottom:12px">Get in Touch</h2><p style="color:rgba(255,255,255,.85)">laureneisman@gmail.com | #3108975683</p></div></section>
 
-<footer>
-<div class="container">
-<h3 style="font-family:'Playfair Display',serif;color:white;margin-bottom:8px">Clean Bodies</h3>
-<p style="color:rgba(255,255,255,.7);margin-bottom:16px;font-size:.9375rem">Because feeling your best shouldn't be complicated.</p>
-<div style="margin-bottom:8px">
-<a href="mailto:laureneisman@gmail.com" style="margin:0 12px">Email</a>
-<a href="tel:3108975683" style="margin:0 12px">Phone</a>
-</div>
-<p>© 2025 Clean Bodies — Lauren Eisman</p>
-</div>
-</footer>
+<footer><div class="container"><h3 style="font-family:'Playfair Display',serif;color:white;margin-bottom:8px">Clean Bodies</h3><p style="color:rgba(255,255,255,.7);margin-bottom:16px">Because feeling your best shouldn't be complicated.</p><a href="mailto:laureneisman@gmail.com">Email</a><a href="tel:3108975683">Phone</a><p>© 2025 Clean Bodies — Lauren Eisman</p></div></footer>
 
 </body>
-</html></body>
 </html>
-
-<section class="hero"><div class="container"><div class="hero-content"><div><h1>Clean Living,<br>Naturally Yours</h1><p>Toxin-free wellness products curated by a certified detoxification specialist. Everything I recommend, I use myself.</p><a href="#shop" class="btn btn-primary">Shop Products</a> <a href="#about" class="btn btn-primary" style="background:var(--terracotta)">My Story</a></div><div style="text-align:center;font-size:5rem">🌿</div></div></div></section>
-
