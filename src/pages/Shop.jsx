@@ -1,79 +1,62 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { products } from '../data/products'
 import SEO from '../components/SEO'
-import { products, categories } from '../data/products'
 
 export default function Shop() {
-  const [activeCategory, setActiveCategory] = useState('all')
-
-  const filteredProducts = activeCategory === 'all'
-    ? products
-    : products.filter(p => p.category === activeCategory)
-
   return (
     <>
       <SEO
-        title="Shop Clean Beauty & Wellness Products"
-        description="Shop non-toxic skincare, raw organic almonds, and detox wellness products at YourCleanBody.com. Every product is personally vetted by a certified detoxification specialist."
+        title="Raw Organic Almonds I Personally Use | YourCleanBody.com"
+        description="The only products on this site — raw organic almonds in two sizes. The same almonds I use for my weekly homemade almond milk."
       />
       <section className="page-header">
         <div className="container">
-          <h1>Our Products</h1>
+          <h1>What I Use</h1>
           <p>
-            Every product is personally vetted and approved by our certified detoxification specialist. 
-            We only stock what we trust for our own families.
+            This isn't a store. It's a short list of products I actually buy for myself and recommend 
+            to anyone who asks. No sponsored picks, no paid placements — just what's in my pantry.
           </p>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="category-tabs">
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                className={`category-tab ${activeCategory === cat.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat.id)}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
-
-          {filteredProducts.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: 'var(--space-3xl)' }}>
-              <p style={{ color: 'var(--text-light)' }}>No products found in this category.</p>
-            </div>
-          ) : (
-            <div className="grid grid-3">
-              {filteredProducts.map(product => (
-                <div className="card" key={product.id}>
-                  <div className="card-image" style={{
-                    background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}>
-                    <img
-                      src={product.category === 'skincare' ? '/images/products/skincare-product.png' : product.category === 'almonds' ? '/images/products/raw-almonds-product.png' : '/images/products/wellness-product.png'}
-                      alt={product.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="card-body">
-                    {product.badge && <span className="badge" style={{ marginBottom: 'var(--space-sm)' }}>{product.badge}</span>}
-                    <h3 className="card-title">{product.name}</h3>
-                    <p className="card-text">{product.tagline}</p>
-                    <p className="card-text" style={{ fontSize: '0.875rem' }}>{product.description}</p>
-                    <div className="card-footer">
-                      <span className="price">{product.price}</span>
-                      <Link to={`/shop/${product.id}`} className="btn btn-primary">Details</Link>
-                    </div>
+          <div className="grid grid-2" style={{ maxWidth: '700px', margin: '0 auto' }}>
+            {products.map(product => (
+              <div className="card" key={product.id}>
+                <div className="card-image" style={{
+                  background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <img
+                    src="/images/products/raw-almonds-product.png"
+                    alt={product.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="card-body">
+                  {product.badge && <span className="badge" style={{ marginBottom: 'var(--space-sm)' }}>{product.badge}</span>}
+                  <h3 className="card-title">{product.name}</h3>
+                  <p className="card-text">{product.tagline}</p>
+                  <div className="card-footer">
+                    <span className="price">{product.price}</span>
+                    <Link to={`/shop/${product.id}`} className="btn btn-primary">Details</Link>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ backgroundColor: 'var(--color-cream)', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <h2>Want a Custom 7-Day Reset?</h2>
+          <p className="section-subtitle">
+            Products are just tools. Real change comes from a plan tailored to you. I create personalized 
+            7-day reset detox plans based on your unique needs.
+          </p>
+          <Link to="/contact" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
         </div>
       </section>
     </>

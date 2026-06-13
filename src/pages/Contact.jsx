@@ -9,8 +9,8 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us | Get in Touch"
-        description="Have a question about our non-toxic skincare, raw almonds, or wellness products? Contact YourCleanBody.com — we respond within 24 hours."
+        title="Contact | Get Your Custom Detox Plan"
+        description="Reach out for personalized 7-day reset detox plans, product questions, or just to say hello. Real responses from a real person."
       />
       <section className="page-header">
         <div className="container">

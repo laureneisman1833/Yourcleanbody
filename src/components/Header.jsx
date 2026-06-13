@@ -37,7 +37,7 @@ export default function Header() {
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <NavLink to="/" className={linkClass} onClick={closeMenu}>Home</NavLink>
             <NavLink to="/shop" className={linkClass} onClick={closeMenu}>Shop</NavLink>
-            <NavLink to="/recipes" className={linkClass} onClick={closeMenu}>Recipes</NavLink>
+            <NavLink to="/recipes" className={linkClass} onClick={closeMenu}>Almond Milk Recipe</NavLink>
             <NavLink to="/about" className={linkClass} onClick={closeMenu}>About</NavLink>
             <NavLink to="/contact" className={linkClass} onClick={closeMenu}>Contact</NavLink>
           </div>

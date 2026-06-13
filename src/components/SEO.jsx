@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 export default function SEO({ title, description, ogTitle, ogDescription, ogImage }) {
   const siteName = 'YourCleanBody.com'
   const fullTitle = title ? `${title} | ${siteName}` : siteName
-  const metaDescription = description || 'Non-toxic skincare, raw organic almonds, and wellness products curated by a certified detoxification specialist.'
+  const metaDescription = description || 'Products I personally use and trust. Raw organic almonds for homemade almond milk, one simple almond milk recipe, and custom 7-day reset detox plans.'
   const metaOgTitle = ogTitle || fullTitle
   const metaOgDescription = ogDescription || metaDescription
   const metaOgImage = ogImage || 'https://yourcleanbody.com/og-image.jpg'
@@ -12,7 +12,7 @@ export default function SEO({ title, description, ogTitle, ogDescription, ogImag
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
-      <meta name="keywords" content="non-toxic skincare, raw organic almonds, homemade almond milk, detox wellness, clean beauty, natural products" />
+      <meta name="keywords" content="homemade almond milk, raw organic almonds, almond milk recipe, detox plan, clean living, non-toxic products" />
 
       {/* Open Graph */}
       <meta property="og:title" content={metaOgTitle} />
