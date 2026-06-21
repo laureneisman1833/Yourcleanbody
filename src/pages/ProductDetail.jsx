@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { products } from '../data/products'
+import { asset } from '../utils/assets'
 
 export default function ProductDetail() {
   const { productId } = useParams()
@@ -42,7 +43,7 @@ export default function ProductDetail() {
               overflow: 'hidden', minHeight: '400px',
             }}>
               <img
-                src="/images/products/raw-almonds-product.png"
+                src={asset("/images/products/raw-almonds-product.png")}
                 alt={product.name}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

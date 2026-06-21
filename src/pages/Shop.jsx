@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { products } from '../data/products'
 import SEO from '../components/SEO'
+import { asset } from '../utils/assets'
 
 export default function Shop() {
   return (
@@ -29,7 +30,7 @@ export default function Shop() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
                   <img
-                    src="/images/products/raw-almonds-product.png"
+                    src={asset("/images/products/raw-almonds-product.png")}
                     alt={product.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

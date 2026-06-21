@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { asset } from '../utils/assets'
 
 export default function About() {
   return (
@@ -44,7 +45,7 @@ export default function About() {
 
             <div className="about-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
               <img
-                src="/images/hero/clean-bodies-hero-portrait.png"
+                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
                 alt="Clean Bodies"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { asset } from '../utils/assets'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export default function Header() {
         <nav className="nav">
           <Link to="/" className="nav-brand" onClick={closeMenu}>
             <img
-              src="/images/logo/clean-bodies-icon.png"
+              src={asset("/images/logo/clean-bodies-icon.png")}
               alt="Clean Bodies"
               width="36"
               height="36"

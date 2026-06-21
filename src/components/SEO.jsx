@@ -6,7 +6,7 @@ export default function SEO({ title, description, ogTitle, ogDescription, ogImag
   const metaDescription = description || 'Products I personally use and trust. Raw organic almonds for homemade almond milk, one simple almond milk recipe, and custom 7-day reset detox plans.'
   const metaOgTitle = ogTitle || fullTitle
   const metaOgDescription = ogDescription || metaDescription
-  const metaOgImage = ogImage || 'https://yourcleanbody.com/og-image.jpg'
+  const metaOgImage = ogImage || 'https://www.yourcleanbody.com/og-image.jpg'
 
   return (
     <Helmet>
@@ -18,7 +18,7 @@ export default function SEO({ title, description, ogTitle, ogDescription, ogImag
       <meta property="og:title" content={metaOgTitle} />
       <meta property="og:description" content={metaOgDescription} />
       <meta property="og:image" content={metaOgImage} />
-      <meta property="og:url" content={`https://yourcleanbody.com${window.location.pathname}`} />
+      <meta property="og:url" content={`https://www.yourcleanbody.com${window.location.pathname}`} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={siteName} />
 

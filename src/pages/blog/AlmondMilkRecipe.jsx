@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../../components/SEO'
+import { asset } from '../../utils/assets'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -7,7 +8,7 @@ const structuredData = {
   name: 'How to Make Almond Milk at Home (Easy 3-Ingredient Recipe)',
   author: { '@type': 'Organization', name: 'Clean Bodies' },
   datePublished: '2025-06-01',
-  description: 'Learn how to make creamy homemade almond milk with just 3 ingredients. Step-by-step recipe, FAQ, and tips from a certified detoxification specialist.',
+  description: 'Learn how to make creamy homemade almond milk with just 3 ingredients. Step-by-step recipe, FAQ, and tips for the best results.',
   prepTime: 'PT10M',
   totalTime: 'PT8H10M',
   recipeYield: '4 cups',
@@ -27,7 +28,7 @@ const structuredData = {
   recipeCategory: 'Beverage',
   recipeCuisine: 'American',
   nutrition: { '@type': 'NutritionInformation', calories: '60 calories per cup' },
-  image: 'https://yourcleanbody.com/images/recipe-card/almond-milk-recipe-card.png',
+  image: 'https://www.yourcleanbody.com/images/recipe-card/almond-milk-recipe-card.png',
 }
 
 const faqStructuredData = {
@@ -62,7 +63,7 @@ export default function AlmondMilkRecipe() {
     <div className="blog-article">
       <SEO
         title="How to Make Almond Milk at Home (Easy 3-Ingredient Recipe)"
-        description="Learn how to make creamy homemade almond milk with just 3 ingredients. Step-by-step recipe, FAQ, and tips from a certified detoxification specialist."
+        description="Learn how to make creamy homemade almond milk with just 3 ingredients. Step-by-step recipe with pro tips for the best results."
       />
 
       {/* JSON-LD Structured Data */}
@@ -101,7 +102,7 @@ export default function AlmondMilkRecipe() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '40px' }}>
             <div style={{ maxWidth: '780px' }}>
               <img
-                src="/images/recipe-card/almond-milk-recipe-card.png"
+                src={asset("/images/recipe-card/almond-milk-recipe-card.png")}
                 alt="Homemade Almond Milk Recipe — creamy, dairy-free, and made with organic almonds"
                 style={{ width: '100%', borderRadius: '12px', marginBottom: '32px' }}
               />
@@ -179,7 +180,7 @@ export default function AlmondMilkRecipe() {
               <div style={{ background: '#F5F0E8', borderRadius: '12px', padding: '24px', position: 'sticky', top: '96px' }}>
                 <h3 style={{ fontSize: '1.125rem', marginBottom: '16px', color: '#3D5A3E' }}>Shop Ingredients</h3>
                 <Link to="/shop/raw-almonds">
-                  <img src="/images/products/raw-almonds-product.png" alt="Raw Organic Almonds" style={{ width: '100%', borderRadius: '8px', marginBottom: '12px' }} />
+                  <img src={asset("/images/products/raw-almonds-product.png")} alt="Raw Organic Almonds" style={{ width: '100%', borderRadius: '8px', marginBottom: '12px' }} />
                 </Link>
                 <h4 style={{ fontSize: '1rem', marginBottom: '4px' }}>Raw Organic Almonds</h4>
                 <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.125rem', fontWeight: 600, color: '#3D5A3E' }}>$16.00 (2lb) / $34.00 (5lb)</p>

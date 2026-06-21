@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { asset } from '../utils/assets'
 
 export default function Recipes() {
   return (
@@ -23,7 +24,7 @@ export default function Recipes() {
           <div className="recipe-card-featured" style={{ gridTemplateColumns: '1fr' }}>
             <div className="recipe-card-image" style={{ padding: 0, minHeight: '300px' }}>
               <img
-                src="/images/recipe-card/almond-milk-recipe-card.png"
+                src={asset("/images/recipe-card/almond-milk-recipe-card.png")}
                 alt="Raw Homemade Almond Milk"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -94,7 +95,7 @@ export default function Recipes() {
               </p>
               <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/shop/raw-almonds" className="btn btn-primary">Shop Raw Almonds</Link>
-                <Link to="/shop/almond-milk-bag" className="btn btn-secondary">Get a Nut Milk Bag</Link>
+                <Link to="/shop" className="btn btn-secondary">See What I Use</Link>
               </div>
             </div>
           </div>

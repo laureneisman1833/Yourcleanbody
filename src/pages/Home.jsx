@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { products, featuredProducts } from '../data/products'
+import { asset } from '../utils/assets'
 
 export default function Home() {
   const featuredItems = featuredProducts.map(id => products.find(p => p.id === id)).filter(Boolean)
@@ -29,7 +30,7 @@ export default function Home() {
             </div>
             <div className="hero-image">
               <img
-                src="/images/hero/clean-bodies-hero-banner.png"
+                src={asset("/images/hero/clean-bodies-hero-banner.png")}
                 alt="Clean Bodies"
                 style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-card)' }}
               />
@@ -51,7 +52,7 @@ export default function Home() {
               <div className="card" key={product.id}>
                 <div className="card-image">
                   <img
-                    src="/images/products/raw-almonds-product.png"
+                    src={asset("/images/products/raw-almonds-product.png")}
                     alt={product.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -77,7 +78,7 @@ export default function Home() {
           <div className="recipe-card-featured" style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="recipe-card-image" style={{ padding: 0 }}>
               <img
-                src="/images/recipe-card/almond-milk-recipe-card.png"
+                src={asset("/images/recipe-card/almond-milk-recipe-card.png")}
                 alt="Raw Homemade Almond Milk"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
