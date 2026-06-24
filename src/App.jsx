@@ -9,7 +9,7 @@ import Recipes from './pages/Recipes'
 import Contact from './pages/Contact'
 import AlmondMilkRecipe from './pages/blog/AlmondMilkRecipe'
 import MetabolicDetox from './pages/MetabolicDetox'
-import PersonalizedReset from './pages/PersonalizedReset'
+import ResetPlan from './pages/ResetPlan'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:productId" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
-          <Route path="/personalized-reset" element={<PersonalizedReset />} />
+          <Route path="/reset-plan" element={<ResetPlan />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/blog/how-to-make-almond-milk" element={<AlmondMilkRecipe />} />
           <Route path="/contact" element={<Contact />} />
