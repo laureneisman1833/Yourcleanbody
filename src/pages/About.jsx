@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { asset } from '../utils/assets'
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About Clean Bodies | Our Story"
-        description="Clean Bodies was founded in 2012 from a deeply personal health journey — helping individuals and families achieve lasting wellness."
+        title="About | Certified Detoxification Specialist"
+        description="Learn the story behind YourCleanBody.com — a certified detoxification specialist curating non-toxic skincare, raw almonds, and wellness products for health-conscious families."
       />
       <section className="page-header">
         <div className="container">
-          <h1>About Clean Bodies</h1>
+          <h1>Our Story</h1>
           <p>
-            A personal journey to lasting wellness, and a mission to help others find the same.
+            A trusted source for toxin-free wellness — born from personal experience, backed by professional expertise.
           </p>
         </div>
       </section>
@@ -22,31 +21,60 @@ export default function About() {
         <div className="container">
           <div className="about-content">
             <div>
+              <h2>Meet Your Certified Detoxification Specialist</h2>
               <p style={{ marginTop: 'var(--space-lg)' }}>
-                Clean Bodies was founded in 2012 from a deeply personal health journey. After spending more than
-                a decade struggling with chronic pain and persistent acne, I was determined to find answers
-                beyond temporary solutions. Through two years of intensive study in Nutritional Sciences and
-                Metabolic Detoxification, I gained the knowledge and tools needed to transform my own health and
-                create a lifestyle that allowed me not only to recover, but to truly thrive.
+                Clean Bodies was founded from a simple belief: what you put on and in your body matters deeply. 
+                After years of working with clients on their detox journeys — helping them navigate confusing labels,
+                hidden toxins, and empty marketing claims — I realized there was a gap.
               </p>
               <p>
-                Over the past 15 years, I have had the privilege of consulting with individuals and families,
-                helping them make practical, sustainable changes that support lasting wellness. My approach
-                focuses on simple, effective strategies that empower people to take control of their health
-                without unnecessary expense or overwhelm.
+                There was no single trusted source for products I could confidently recommend. So I created one.
               </p>
               <p>
-                After taking time away from my practice to welcome and raise my son, I am excited to return to
-                serving others through Clean Bodies. My mission remains the same: to help individuals and
-                families achieve greater health, vitality, and happiness through education, personalized
-                guidance, and realistic lifestyle solutions that fit their lives and their budgets.
+                Every product on Clean Bodies is something I personally use, test, and stand behind. 
+                From the raw almonds I blend into milk for my family, to the skincare I trust on my own skin — 
+                nothing makes it onto these shelves without passing my standards.
               </p>
+              <p className="handwriting" style={{ fontSize: '1.375rem', marginTop: 'var(--space-lg)' }}>
+                \"We only stock what we personally trust for our own families.\"
+              </p>
+
+              <div className="credentials">
+                <div className="credential-item">
+                  <div className="credential-icon">🎓</div>
+                  <div className="credential-text">
+                    <h4>Certified Detox Specialist</h4>
+                    <p>Advanced certification in nutritional detoxification and holistic wellness</p>
+                  </div>
+                </div>
+                <div className="credential-item">
+                  <div className="credential-icon">🔬</div>
+                  <div className="credential-text">
+                    <h4>Ingredient Expert</h4>
+                    <p>Years of experience analyzing product formulations for hidden toxins</p>
+                  </div>
+                </div>
+                <div className="credential-item">
+                  <div className="credential-icon">👨‍👩‍👧‍👦</div>
+                  <div className="credential-text">
+                    <h4>Parent & Advocate</h4>
+                    <p>Personally committed to creating a safer world for the next generation</p>
+                  </div>
+                </div>
+                <div className="credential-item">
+                  <div className="credential-icon">📚</div>
+                  <div className="credential-text">
+                    <h4>Educator</h4>
+                    <p>Passionate about teaching others how to read labels and make informed choices</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="about-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
               <img
-                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
-                alt="Clean Bodies"
+                src="/images/hero/clean-bodies-hero-portrait.png"
+                alt="Clean Bodies — Certified Detoxification Specialist"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
@@ -54,15 +82,16 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section" style={{ backgroundColor: 'var(--color-cream)', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '700px', margin: '0 auto' }}>
-          <h2>Want to Know More?</h2>
+      {/* Mission Section */}
+      <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
+        <div className="container" style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+          <h2>Our Mission</h2>
           <p style={{ fontSize: '1.125rem', marginTop: 'var(--space-lg)' }}>
-            If you have a question about any product on this site — or if you're curious about a personalized
-            detox plan — I'd love to hear from you.
+            Empower health-conscious families to live cleaner, toxin-free lives with products we personally trust and use. 
+            We believe in a world where every home has access to safe, non-toxic essentials that nourish body and planet.
           </p>
           <div style={{ marginTop: 'var(--space-2xl)' }}>
-            <Link to="/contact" className="btn btn-primary">Reach Out →</Link>
+            <Link to="/shop" className="btn btn-primary">Shop Our Products</Link>
           </div>
         </div>
       </section>

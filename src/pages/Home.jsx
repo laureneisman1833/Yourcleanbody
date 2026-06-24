@@ -1,58 +1,67 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { products, featuredProducts } from '../data/products'
-import { asset } from '../utils/assets'
+import { recipes } from '../data/recipes'
 
 export default function Home() {
   const featuredItems = featuredProducts.map(id => products.find(p => p.id === id)).filter(Boolean)
+  const featuredRecipe = recipes.find(r => r.featured)
 
   return (
     <>
       <SEO
-        title="YourCleanBody.com | Raw Almonds, Homemade Almond Milk & Custom Detox Plans"
-        description="Products I personally use and trust. Raw organic almonds for homemade almond milk, the only almond milk recipe you need, and custom 7-day reset detox plans."
+        title="YourCleanBody.com | Non-Toxic Skincare, Raw Organic Almonds & Wellness Products"
+        description="Discover non-toxic skincare, raw organic almonds for homemade almond milk, and detox wellness products. Curated by a certified detoxification specialist."
       />
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
               <h1>Clean Living,<br />Naturally Yours</h1>
               <p>
-                I only recommend what I actually use. The raw almonds in my pantry. The almond milk 
-                recipe I've perfected over years. The simple products that made a real difference 
-                in how I feel. Nothing here is sponsored — it's all stuff I bought for myself.
+                Toxin-free wellness products curated and personally endorsed by a certified detoxification specialist. 
+                From non-toxic skincare to raw almonds for the creamiest homemade almond milk — everything we sell, we use ourselves.
               </p>
               <div className="hero-cta">
-                <Link to="/shop" className="btn btn-primary">Shop My Favorites</Link>
-                <Link to="/about" className="btn btn-secondary">My Story</Link>
+                <Link to="/shop" className="btn btn-primary">Shop Now</Link>
+                <Link to="/about" className="btn btn-secondary">Our Story</Link>
               </div>
             </div>
             <div className="hero-image">
               <img
-                src={asset("/images/hero/clean-bodies-hero-banner.png")}
-                alt="Clean Bodies"
-                style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-card)' }}
+                src="/images/hero/clean-bodies-hero-banner.png"
+                alt="Clean Bodies — Natural wellness products"
+                style={{
+                  width: '100%',
+                  maxWidth: '500px',
+                  borderRadius: 'var(--radius-md)',
+                  boxShadow: 'var(--shadow-card)',
+                }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Almonds */}
+      {/* Featured Products */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">The Only Product I Really Recommend</h2>
+          <h2 className="section-title">Our Most Loved Products</h2>
           <p className="section-subtitle">
-            Everything starts with good ingredients. These are the raw almonds I buy for myself — 
-            the same ones I use in my almond milk every single week.
+            Every product is personally vetted and approved by our certified detoxification specialist. We only stock what we trust for our own families.
           </p>
-          <div className="grid grid-2" style={{ maxWidth: '700px', margin: '0 auto' }}>
+          <div className="grid grid-3">
             {featuredItems.map(product => (
               <div className="card" key={product.id}>
-                <div className="card-image">
+                <div className="card-image" style={{
+                  background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
                   <img
-                    src={asset("/images/products/raw-almonds-product.png")}
+                    src={product.category === 'skincare' ? '/images/products/skincare-product.png' : product.category === 'almonds' ? '/images/products/raw-almonds-product.png' : '/images/products/wellness-product.png'}
                     alt={product.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -69,82 +78,86 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-2xl)' }}>
+            <Link to="/shop" className="btn btn-terracotta">Browse All Products</Link>
+          </div>
         </div>
       </section>
 
-      {/* The Almond Milk Recipe — Flagship */}
+      {/* Features / Values */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
-          <div className="recipe-card-featured" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="recipe-card-image" style={{ padding: 0 }}>
-              <img
-                src={asset("/images/recipe-card/almond-milk-recipe-card.png")}
-                alt="Raw Homemade Almond Milk"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
+          <h2 className="section-title">Why Choose Clean Bodies?</h2>
+          <div className="features">
+            <div className="feature-item">
+              <div className="feature-icon">✓</div>
+              <h3 className="feature-title">Certified & Curated</h3>
+              <p className="feature-text">Every product personally vetted by a certified detoxification specialist. If we wouldn't use it, we don't sell it.</p>
             </div>
-            <div className="recipe-card-content">
-              <span className="badge">My Signature Recipe</span>
-              <h3>Raw Homemade Almond Milk</h3>
-              <p>
-                Creamier than store-bought, free of hidden additives, and made with just two ingredients. 
-                This is the recipe I've perfected over years of making almond milk for my family. 
-                It takes 10 minutes of active prep time.
-              </p>
-              <div className="recipe-details">
-                <div className="recipe-detail">
-                  <div className="recipe-detail-label">Prep</div>
-                  <div className="recipe-detail-value">10 min</div>
-                </div>
-                <div className="recipe-detail">
-                  <div className="recipe-detail-label">Soak</div>
-                  <div className="recipe-detail-value">8+ hrs</div>
-                </div>
-                <div className="recipe-detail">
-                  <div className="recipe-detail-label">Yields</div>
-                  <div className="recipe-detail-value">4 cups</div>
-                </div>
-              </div>
-              <p style={{ fontSize: '0.9375rem', color: 'var(--text-medium)', marginTop: 'var(--space-md)' }}>
-                <strong>Ingredients:</strong> Raw organic almonds, filtered water, pinch of sea salt. That's it.
-              </p>
-              <Link to="/blog/how-to-make-almond-milk" className="btn btn-primary" style={{ marginTop: 'var(--space-md)' }}>
-                Get the Full Recipe →
-              </Link>
+            <div className="feature-item">
+              <div className="feature-icon">🌱</div>
+              <h3 className="feature-title">Toxin-Free Promise</h3>
+              <p className="feature-text">Zero hidden toxins, synthetic fragrances, or harmful additives. Full ingredient transparency on every product.</p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">👶</div>
+              <h3 className="feature-title">Family-First</h3>
+              <p className="feature-text">From safe infant weaning recipes to non-toxic skincare for every age — we support the whole family's wellness journey.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Custom 7-Day Reset Detox Plan */}
-      <section className="section" style={{ textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <h2 className="section-title">Need Something More Personal?</h2>
-          <p className="section-subtitle">
-            Everyone's body is different. I create tailored 7-day reset detox plans based on your unique 
-            needs and goals. No generic programs — just honest, personalized guidance.
-          </p>
-          <Link to="/contact" className="btn btn-terracotta" style={{ fontSize: '1.125rem', padding: 'var(--space-md) var(--space-2xl)' }}>
-            Get Your Custom Plan →
-          </Link>
-          <p style={{ fontSize: '0.875rem', color: 'var(--text-light)', marginTop: 'var(--space-md)' }}>
-            A personalized 7-day reset. PDF or guided — your choice.
-          </p>
-        </div>
-      </section>
+      {/* Featured Recipe */}
+      {featuredRecipe && (
+        <section className="section">
+          <div className="container">
+            <h2 className="section-title">Latest from the Blog</h2>
+            <div className="recipe-card-featured">
+              <div className="recipe-card-image" style={{ padding: 0 }}>
+                <img
+                  src="/images/recipe-card/almond-milk-recipe-card.png"
+                  alt="Homemade Almond Milk Recipe Card"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="recipe-card-content">
+                <span className="badge">{featuredRecipe.category}</span>
+                <h3>{featuredRecipe.title}</h3>
+                <p>{featuredRecipe.excerpt}</p>
+                <div className="recipe-details">
+                  <div className="recipe-detail">
+                    <div className="recipe-detail-label">Prep</div>
+                    <div className="recipe-detail-value">10 min</div>
+                  </div>
+                  <div className="recipe-detail">
+                    <div className="recipe-detail-label">Soak</div>
+                    <div className="recipe-detail-value">8+ hrs</div>
+                  </div>
+                  <div className="recipe-detail">
+                    <div className="recipe-detail-label">Yields</div>
+                    <div className="recipe-detail-value">4 cups</div>
+                  </div>
+                </div>
+                <Link to="/blog/how-to-make-almond-milk" className="btn btn-primary">Read the Full Recipe</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* CTA */}
+      {/* About Snippet / CTA */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', textAlign: 'center' }}>
         <div className="container">
-          <h2 className="section-title">Start With the Almond Milk</h2>
+          <h2 className="section-title">Ready to Start Your Clean Journey?</h2>
           <p className="section-subtitle">
-            The easiest first step? Make your own almond milk. It's cheaper, creamier, and cleaner than 
-            anything you'll find at the store. I'll show you exactly how.
+            Whether you're new to toxin-free living or deepening your practice, we're here to help. 
+            Every product, every recipe, every guide — backed by real expertise and real care.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/blog/how-to-make-almond-milk" className="btn btn-primary">Get the Recipe</Link>
-            <Link to="/shop" className="btn btn-secondary">Shop the Almonds</Link>
-            <Link to="/contact" className="btn btn-terracotta">Ask About a Custom Plan</Link>
+            <Link to="/shop" className="btn btn-primary">Shop Products</Link>
+            <Link to="/blog/how-to-make-almond-milk" className="btn btn-secondary">Almond Milk Recipe</Link>
+            <Link to="/contact" className="btn btn-terracotta">Get in Touch</Link>
           </div>
         </div>
       </section>

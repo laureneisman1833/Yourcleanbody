@@ -27,8 +27,8 @@ export default function ProductDetail() {
   return (
     <>
       <SEO
-        title={product.id === 'raw-almonds' ? 'Raw Organic Almonds for Homemade Almond Milk | YourCleanBody.com' : 'Bulk Raw Organic Almonds (5lb) | YourCleanBody.com'}
-        description={`${product.name} — ${product.tagline}. The almonds I personally buy and use for my weekly homemade almond milk.`}
+        title={`${product.name} | YourCleanBody.com`}
+        description={`${product.name} — ${product.tagline}. A clean, non-toxic choice I personally use and trust.`}
       />
       <section className="section" style={{ paddingTop: 'var(--space-2xl)' }}>
         <div className="container">
@@ -43,7 +43,7 @@ export default function ProductDetail() {
               overflow: 'hidden', minHeight: '400px',
             }}>
               <img
-                src={asset("/images/products/raw-almonds-product.png")}
+                src={asset(product.image || "/images/products/raw-almonds-product.png")}
                 alt={product.name}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -58,7 +58,7 @@ export default function ProductDetail() {
 
               <div style={{ marginTop: 'var(--space-lg)', padding: 'var(--space-md)', background: 'var(--color-cream)', borderRadius: 'var(--radius-sm)' }}>
                 <p className="handwriting" style={{ fontSize: '1rem', color: 'var(--color-warm-brown)', marginBottom: 0 }}>
-                  "These are the almonds in my pantry right now. If I wouldn't buy them for myself, I wouldn't recommend them to you."
+                  "If I wouldn't use this for my own family, I wouldn't recommend it to you. Every product on this site is something I personally trust."
                 </p>
               </div>
 

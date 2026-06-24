@@ -22,7 +22,7 @@ export default function Shop() {
 
       <section className="section">
         <div className="container">
-          <div className="grid grid-2" style={{ maxWidth: '700px', margin: '0 auto' }}>
+          <div className="grid grid-3">
             {products.map(product => (
               <div className="card" key={product.id}>
                 <div className="card-image" style={{
@@ -30,7 +30,7 @@ export default function Shop() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
                   <img
-                    src={asset("/images/products/raw-almonds-product.png")}
+                    src={asset(product.image || "/images/products/raw-almonds-product.png")}
                     alt={product.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -57,7 +57,7 @@ export default function Shop() {
             Products are just tools. Real change comes from a plan tailored to you. I create personalized 
             7-day reset detox plans based on your unique needs.
           </p>
-          <Link to="/contact" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
+          <Link to="/personalized-reset" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
         </div>
       </section>
     </>
