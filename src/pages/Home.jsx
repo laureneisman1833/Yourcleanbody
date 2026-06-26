@@ -1,163 +1,123 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { products, featuredProducts } from '../data/products'
-import { recipes } from '../data/recipes'
+import { products } from '../data/products'
+import { asset } from '../utils/assets'
 
 export default function Home() {
-  const featuredItems = featuredProducts.map(id => products.find(p => p.id === id)).filter(Boolean)
-  const featuredRecipe = recipes.find(r => r.featured)
+  const featuredProducts = products.filter(p => ['nontoxic-skincare', 'raw-almonds', 'wellness-detox-kit'].includes(p.id))
 
   return (
     <>
-      <SEO
-        title="YourCleanBody.com | Non-Toxic Skincare, Raw Organic Almonds & Wellness Products"
-        description="Discover non-toxic skincare, raw organic almonds for homemade almond milk, and detox wellness products. Curated by a certified detoxification specialist."
+      <SEO 
+        title="YourCleanBody.com | Toxin-Free Wellness & Detoxification"
+        description="A trusted source for toxin-free wellness, curated by a certified detoxification specialist. Discover non-toxic skincare, raw organic almonds, and personalized detox plans."
       />
-      {/* Hero Section */}
-      <section className="hero">
+
+      {/* Hero Section - The Founder's Story */}
+      <section className="section" style={{ paddingTop: 'var(--space-2xl)' }}>
         <div className="container">
-          <div className="hero-content">
-            <div className="hero-text">
-              <h1>Clean Living,<br />Naturally Yours</h1>
-              <p>
-                Toxin-free wellness products curated and personally endorsed by a certified detoxification specialist. 
-                From non-toxic skincare to raw almonds for the creamiest homemade almond milk — everything we sell, we use ourselves.
+          <div className="about-content">
+            <div>
+              <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>Welcome to YourCleanBody.com</span>
+              <h1>Meet Your Certified Detoxification Specialist</h1>
+              <p style={{ marginTop: 'var(--space-lg)', fontSize: '1.125rem' }}>
+                Clean Bodies was founded from a simple belief: what you put on and in your body matters deeply. 
+                After years of working with clients on their detox journeys — helping them navigate confusing labels,
+                hidden toxins, and empty marketing claims — I realized there was a gap.
               </p>
-              <div className="hero-cta">
-                <Link to="/shop" className="btn btn-primary">Shop Now</Link>
-                <Link to="/about" className="btn btn-secondary">Our Story</Link>
+              <p>
+                There was no single trusted source for products I could confidently recommend. So I created one.
+              </p>
+              <p>
+                Every product on Clean Bodies is something I personally use, test, and stand behind. 
+                From the raw almonds I blend into milk for my family, to the skincare I trust on my own skin — 
+                nothing makes it onto these shelves without passing my standards.
+              </p>
+              
+              <div className="credentials" style={{ marginTop: 'var(--space-xl)' }}>
+                <div className="credential-item">
+                  <div className="credential-icon">🎓</div>
+                  <div className="credential-text">
+                    <h4>Certified Detox Specialist</h4>
+                    <p>Advanced certification in nutritional detoxification and holistic wellness</p>
+                  </div>
+                </div>
+                <div className="credential-item">
+                  <div className="credential-icon">🔬</div>
+                  <div className="credential-text">
+                    <h4>Ingredient Expert</h4>
+                    <p>Years of experience analyzing product formulations for hidden toxins</p>
+                  </div>
+                </div>
+                <div className="credential-item">
+                  <div className="credential-icon">👨‍👩‍👧‍👦</div>
+                  <div className="credential-text">
+                    <h4>Parent & Advocate</h4>
+                    <p>Personally committed to creating a safer world for the next generation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div style={{ marginTop: 'var(--space-2xl)' }}>
+                <Link to="/shop" className="btn btn-primary">Shop My Recommended Products</Link>
+                <Link to="/personalized-reset" className="btn btn-secondary" style={{ marginLeft: 'var(--space-md)' }}>Custom 7-Day Reset</Link>
               </div>
             </div>
-            <div className="hero-image">
+
+            <div className="about-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
               <img
-                src="/images/hero/clean-bodies-hero-banner.png"
-                alt="Clean Bodies — Natural wellness products"
-                style={{
-                  width: '100%',
-                  maxWidth: '500px',
-                  borderRadius: 'var(--radius-md)',
-                  boxShadow: 'var(--shadow-card)',
-                }}
+                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
+                alt="Clean Bodies — Certified Detoxification Specialist"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Trust Markers */}
+      <section className="section" style={{ backgroundColor: 'var(--color-sage-light)' }}>
+        <div className="container">
+          <div className="grid grid-3">
+            <div style={{ textAlign: 'center' }}>
+              <h3>Certified & Curated</h3>
+              <p>Vetted by a specialist. No hidden toxins.</p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3>Family-First</h3>
+              <p>Safe for you and your loved ones.</p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3>Authentic Results</h3>
+              <p>Focus on gentle, effective cleansing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Snippet */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">Our Most Loved Products</h2>
-          <p className="section-subtitle">
-            Every product is personally vetted and approved by our certified detoxification specialist. We only stock what we trust for our own families.
-          </p>
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Pantry & Skincare Essentials</h2>
           <div className="grid grid-3">
-            {featuredItems.map(product => (
+            {featuredProducts.map(product => (
               <div className="card" key={product.id}>
-                <div className="card-image" style={{
-                  background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <img
-                    src={product.category === 'skincare' ? '/images/products/skincare-product.png' : product.category === 'almonds' ? '/images/products/raw-almonds-product.png' : '/images/products/wellness-product.png'}
-                    alt={product.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                <div className="card-image" style={{ background: 'var(--color-cream)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}>
+                  <img src={asset(product.image || "/images/products/raw-almonds-product.png")} alt={product.name} style={{ maxHeight: '100%' }} />
                 </div>
                 <div className="card-body">
-                  {product.badge && <span className="badge">{product.badge}</span>}
                   <h3 className="card-title">{product.name}</h3>
                   <p className="card-text">{product.tagline}</p>
                   <div className="card-footer">
                     <span className="price">{product.price}</span>
-                    <Link to={`/shop/${product.id}`} className="btn btn-primary">View Details</Link>
+                    <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary">Buy on Amazon</a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: 'var(--space-2xl)' }}>
-            <Link to="/shop" className="btn btn-terracotta">Browse All Products</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features / Values */}
-      <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
-        <div className="container">
-          <h2 className="section-title">Why Choose Clean Bodies?</h2>
-          <div className="features">
-            <div className="feature-item">
-              <div className="feature-icon">✓</div>
-              <h3 className="feature-title">Certified & Curated</h3>
-              <p className="feature-text">Every product personally vetted by a certified detoxification specialist. If we wouldn't use it, we don't sell it.</p>
-            </div>
-            <div className="feature-item">
-              <div className="feature-icon">🌱</div>
-              <h3 className="feature-title">Toxin-Free Promise</h3>
-              <p className="feature-text">Zero hidden toxins, synthetic fragrances, or harmful additives. Full ingredient transparency on every product.</p>
-            </div>
-            <div className="feature-item">
-              <div className="feature-icon">👶</div>
-              <h3 className="feature-title">Family-First</h3>
-              <p className="feature-text">From safe infant weaning recipes to non-toxic skincare for every age — we support the whole family's wellness journey.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Recipe */}
-      {featuredRecipe && (
-        <section className="section">
-          <div className="container">
-            <h2 className="section-title">Latest from the Blog</h2>
-            <div className="recipe-card-featured">
-              <div className="recipe-card-image" style={{ padding: 0 }}>
-                <img
-                  src="/images/recipe-card/almond-milk-recipe-card.png"
-                  alt="Homemade Almond Milk Recipe Card"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div className="recipe-card-content">
-                <span className="badge">{featuredRecipe.category}</span>
-                <h3>{featuredRecipe.title}</h3>
-                <p>{featuredRecipe.excerpt}</p>
-                <div className="recipe-details">
-                  <div className="recipe-detail">
-                    <div className="recipe-detail-label">Prep</div>
-                    <div className="recipe-detail-value">10 min</div>
-                  </div>
-                  <div className="recipe-detail">
-                    <div className="recipe-detail-label">Soak</div>
-                    <div className="recipe-detail-value">8+ hrs</div>
-                  </div>
-                  <div className="recipe-detail">
-                    <div className="recipe-detail-label">Yields</div>
-                    <div className="recipe-detail-value">4 cups</div>
-                  </div>
-                </div>
-                <Link to="/blog/how-to-make-almond-milk" className="btn btn-primary">Read the Full Recipe</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* About Snippet / CTA */}
-      <section className="section" style={{ backgroundColor: 'var(--color-cream)', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="section-title">Ready to Start Your Clean Journey?</h2>
-          <p className="section-subtitle">
-            Whether you're new to toxin-free living or deepening your practice, we're here to help. 
-            Every product, every recipe, every guide — backed by real expertise and real care.
-          </p>
-          <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/shop" className="btn btn-primary">Shop Products</Link>
-            <Link to="/blog/how-to-make-almond-milk" className="btn btn-secondary">Almond Milk Recipe</Link>
-            <Link to="/contact" className="btn btn-terracotta">Get in Touch</Link>
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
+            <Link to="/shop" className="btn btn-secondary">View All Products</Link>
           </div>
         </div>
       </section>

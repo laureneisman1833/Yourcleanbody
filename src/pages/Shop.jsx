@@ -7,15 +7,16 @@ export default function Shop() {
   return (
     <>
       <SEO
-        title="Raw Organic Almonds I Personally Use | YourCleanBody.com"
-        description="The only products on this site — raw organic almonds in two sizes. The same almonds I use for my weekly homemade almond milk."
+        title="Recommended Toxin-Free Products | YourCleanBody.com"
+        description="A curated selection of non-toxic skincare, raw organic almonds, and wellness kits personally vetted and used by a certified detoxification specialist."
       />
+
       <section className="page-header">
         <div className="container">
-          <h1>What I Use</h1>
+          <h1>Recommended Products</h1>
           <p>
-            This isn't a store. It's a short list of products I actually buy for myself and recommend 
-            to anyone who asks. No sponsored picks, no paid placements — just what's in my pantry.
+            I only recommend what I personally use in my own home. Every item here has been audited 
+            for hidden toxins and effective results.
           </p>
         </div>
       </section>
@@ -28,6 +29,7 @@ export default function Shop() {
                 <div className="card-image" style={{
                   background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  height: '250px', overflow: 'hidden'
                 }}>
                   <img
                     src={asset(product.image || "/images/products/raw-almonds-product.png")}
@@ -39,9 +41,24 @@ export default function Shop() {
                   {product.badge && <span className="badge" style={{ marginBottom: 'var(--space-sm)' }}>{product.badge}</span>}
                   <h3 className="card-title">{product.name}</h3>
                   <p className="card-text">{product.tagline}</p>
+                  
+                  <div style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
+                    <Link to={`/shop/${product.id}`} style={{ fontSize: '0.875rem', color: 'var(--color-sage)', fontWeight: 600 }}>
+                      View Ingredients & Details →
+                    </Link>
+                  </div>
+
                   <div className="card-footer">
                     <span className="price">{product.price}</span>
-                    <Link to={`/shop/${product.id}`} className="btn btn-primary">Details</Link>
+                    <a 
+                      href={product.amazonUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer sponsored" 
+                      className="btn btn-primary"
+                      style={{ padding: '0.5rem 1rem', fontSize: '0.9375rem' }}
+                    >
+                      Buy on Amazon
+                    </a>
                   </div>
                 </div>
               </div>
@@ -52,12 +69,12 @@ export default function Shop() {
 
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <h2>Want a Custom 7-Day Reset?</h2>
+          <h2>Need a Tailored Plan?</h2>
           <p className="section-subtitle">
-            Products are just tools. Real change comes from a plan tailored to you. I create personalized 
-            7-day reset detox plans based on your unique needs.
+            Products are helpful tools, but a personalized approach is what creates lasting change. 
+            I offer custom 7-day reset detox plans designed for your specific goals.
           </p>
-          <Link to="/personalized-reset" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
+          <Link to="/personalized-reset" className="btn btn-terracotta">Learn About Custom Plans</Link>
         </div>
       </section>
     </>
