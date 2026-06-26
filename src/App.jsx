@@ -20,7 +20,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:productId" element={<ProductDetail />} />
           <Route path="/about" element={<Navigate to="/" replace />} />
-          <Route path="/reset-plan" element={<ResetPlan />} />
+          <Route path="/personalized-reset" element={<ResetPlan />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/blog/how-to-make-almond-milk" element={<AlmondMilkRecipe />} />
           <Route path="/contact" element={<Contact />} />
