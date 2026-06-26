@@ -32,7 +32,7 @@ export default function Shop() {
                   height: '250px', overflow: 'hidden'
                 }}>
                   <img
-                    src={asset(product.image || "/images/products/raw-almonds-product.png")}
+                    src={asset(product.image)}
                     alt={product.name}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -51,7 +51,7 @@ export default function Shop() {
                   <div className="card-footer">
                     <span className="price">{product.price}</span>
                     <a 
-                      href={product.amazonUrl || 'https://amzn.to/4cM9XqK'} 
+                      href={product.amazonUrl} 
                       target="_blank" 
                       rel="noopener noreferrer sponsored" 
                       className="btn btn-primary"
