@@ -41,11 +41,23 @@ export default function Shop() {
                   <p className="card-text">{product.tagline}</p>
                   <div className="card-footer">
                     <span className="price">{product.price}</span>
-                    <Link to={`/shop/${product.id}`} className="btn btn-primary">Details</Link>
+                    <a
+                      href={product.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="btn btn-primary"
+                    >
+                      Buy on Amazon
+                    </a>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-2xl)' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--text-medium)', fontStyle: 'italic' }}>
+              As an Amazon Associate, I earn from qualifying purchases.
+            </p>
           </div>
         </div>
       </section>
@@ -57,7 +69,7 @@ export default function Shop() {
             Products are just tools. Real change comes from a plan tailored to you. I create personalized 
             7-day reset detox plans based on your unique needs.
           </p>
-          <Link to="/personalized-reset" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
+          <Link to="/reset-plan" className="btn btn-terracotta">Tell Me About a Custom Plan</Link>
         </div>
       </section>
     </>
