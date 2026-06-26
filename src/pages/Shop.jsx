@@ -27,7 +27,7 @@ export default function Shop() {
             {products.map(product => (
               <div className="card" key={product.id}>
                 <div className="card-image" style={{
-                  background: `linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))`,
+                  background: 'linear-gradient(135deg, var(--color-sage-light), var(--color-soft-clay))',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   height: '250px', overflow: 'hidden'
                 }}>
@@ -51,7 +51,7 @@ export default function Shop() {
                   <div className="card-footer">
                     <span className="price">{product.price}</span>
                     <a 
-                      href={product.amazonUrl} 
+                      href={product.amazonUrl || 'https://amzn.to/4cM9XqK'} 
                       target="_blank" 
                       rel="noopener noreferrer sponsored" 
                       className="btn btn-primary"

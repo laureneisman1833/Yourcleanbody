@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 
 export default function Contact() {
@@ -128,7 +129,7 @@ export default function Contact() {
             Not sure what to choose? Send us a message and we'll help you find exactly what you need.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/shop" className="btn btn-primary">Browse Products</a>
+            <Link to="/shop" className="btn btn-primary">Browse Products</Link>
             <a href="mailto:hello@cleanbodies.com" className="btn btn-secondary">Email Us Directly</a>
           </div>
         </div>

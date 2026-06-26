@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h4 className="footer-heading">Learn</h4>
             <ul className="footer-links">
-              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/">Our Story</Link></li>
               <li><Link to="/recipes">Recipes & Blog</Link></li>
               <li><Link to="/recipes">Wellness Guides</Link></li>
               <li><Link to="/contact">Contact</Link></li>

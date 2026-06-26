@@ -126,12 +126,10 @@ export const products = [
     badge: null,
   },
 ]
-
 export const categories = [
   { id: 'all', name: 'All Products' },
   { id: 'skincare', name: 'Non-Toxic Skincare' },
   { id: 'almonds', name: 'Raw Almonds' },
   { id: 'wellness', name: 'Wellness' },
 ]
-
 export const featuredProducts = ['nontoxic-skincare', 'raw-almonds', 'wellness-detox-kit']
