@@ -1,75 +1,68 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { products } from '../data/products'
+import { products, featuredProducts as featuredIds } from '../data/products'
 import { asset } from '../utils/assets'
 
 export default function Home() {
-  const featuredProducts = products.filter(p => ['nontoxic-skincare', 'raw-almonds', 'wellness-detox-kit'].includes(p.id))
+  const featuredProducts = products.filter(p => featuredIds.includes(p.id))
 
   return (
     <>
       <SEO 
-        title="YourCleanBody.com | Toxin-Free Wellness & Detoxification"
-        description="A trusted source for toxin-free wellness, curated by a certified detoxification specialist. Discover non-toxic skincare, raw organic almonds, and personalized detox plans."
+        title="YourCleanBody.com | Clean Isn’t a Trend"
+        description="Clean Isn’t a Trend. It’s What Your Body Was Designed to Be. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
       />
 
       {/* Hero Section - The Founder's Story */}
-      <section className="section" style={{ paddingTop: 'var(--space-2xl)' }}>
+      <section className="section" style={{ paddingTop: 'var(--space-2xl)', backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
-          <div className="about-content">
+          <div className="about-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-3xl)', alignItems: 'center' }}>
             <div>
-              <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>Welcome to YourCleanBody.com</span>
-              <h1>Meet Your Certified Detoxification Specialist</h1>
-              <p style={{ marginTop: 'var(--space-lg)', fontSize: '1.125rem' }}>
-                Clean Bodies was founded from a simple belief: what you put on and in your body matters deeply. 
-                After years of working with clients on their detox journeys — helping them navigate confusing labels,
-                hidden toxins, and empty marketing claims — I realized there was a gap.
+              <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>The Heart of YourCleanBody</span>
+              <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: 'var(--space-xl)', color: 'var(--color-forest)' }}>
+                Clean Isn’t a Trend. <br />
+                It’s What Your Body Was <br />
+                Designed to Be.
+              </h1>
+              <p style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
+                Clean Bodies was born from a simple belief: what you put on and in your body matters deeply. 
+                After years of navigating confusing labels and hidden toxins, I realized there was a gap.
               </p>
-              <p>
-                There was no single trusted source for products I could confidently recommend. So I created one.
+              <p style={{ marginTop: 'var(--space-md)' }}>
+                Every product here is something I personally use and trust for my own family. 
+                From the raw almonds I blend into milk to the skincare I trust on my own skin.
               </p>
-              <p>
-                Every product on Clean Bodies is something I personally use, test, and stand behind. 
-                From the raw almonds I blend into milk for my family, to the skincare I trust on my own skin — 
-                nothing makes it onto these shelves without passing my standards.
-              </p>
-              
-              <div className="credentials" style={{ marginTop: 'var(--space-xl)' }}>
-                <div className="credential-item">
-                  <div className="credential-icon">🎓</div>
-                  <div className="credential-text">
-                    <h4>Certified Detox Specialist</h4>
-                    <p>Advanced certification in nutritional detoxification and holistic wellness</p>
-                  </div>
-                </div>
-                <div className="credential-item">
-                  <div className="credential-icon">🔬</div>
-                  <div className="credential-text">
-                    <h4>Ingredient Expert</h4>
-                    <p>Years of experience analyzing product formulations for hidden toxins</p>
-                  </div>
-                </div>
-                <div className="credential-item">
-                  <div className="credential-icon">👨‍👩‍👧‍👦</div>
-                  <div className="credential-text">
-                    <h4>Parent & Advocate</h4>
-                    <p>Personally committed to creating a safer world for the next generation</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div style={{ marginTop: 'var(--space-2xl)' }}>
-                <Link to="/shop" className="btn btn-primary">Shop My Recommended Products</Link>
-                <Link to="/personalized-reset" className="btn btn-secondary" style={{ marginLeft: 'var(--space-md)' }}>Custom 7-Day Reset</Link>
+              <div style={{ marginTop: 'var(--space-2xl)', display: 'flex', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
+                <Link to="/personalized-reset" className="btn btn-primary">Start Your 7-Day Reset</Link>
+                <Link to="/shop" className="btn btn-secondary">Shop Recommended Products</Link>
               </div>
             </div>
-
-            <div className="about-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
-              <img
-                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
-                alt="Clean Bodies — Certified Detoxification Specialist"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
+              <img 
+                src={asset("/images/hero/clean-bodies-hero-portrait.png")} 
+                alt="Lauren Eisman — Clean Living Specialist" 
+                style={{ width: '100%', height: 'auto', display: 'block' }} 
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Metabolic Detox Focus */}
+      <section className="section" style={{ backgroundColor: 'var(--white)' }}>
+        <div className="container">
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-xl)' }}>Understanding Metabolic Detoxification</h2>
+            <div className="metabolic-intro" style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7, textAlign: 'left' }}>
+              <p>
+                Metabolic detoxification is the body's natural process of transforming and eliminating waste products,
+                excess hormones, environmental toxins, and byproducts of metabolism through the liver, digestive system,
+                kidneys, skin, and lymphatic system.
+              </p>
+              <p style={{ marginTop: 'var(--space-md)' }}>
+                When the gut, liver, and lymphatic system are functioning optimally, many people find it easier to establish 
+                healthy habits that support energy levels, body composition goals, and long-term wellness.
+              </p>
             </div>
           </div>
         </div>
@@ -80,15 +73,15 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-3">
             <div style={{ textAlign: 'center' }}>
-              <h3>Certified & Curated</h3>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Certified & Curated</h3>
               <p>Vetted by a specialist. No hidden toxins.</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <h3>Family-First</h3>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Family-First</h3>
               <p>Safe for you and your loved ones.</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <h3>Authentic Results</h3>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Authentic Results</h3>
               <p>Focus on gentle, effective cleansing.</p>
             </div>
           </div>
@@ -103,12 +96,12 @@ export default function Home() {
             {featuredProducts.map(product => (
               <div className="card" key={product.id}>
                 <div className="card-image" style={{ background: 'var(--color-cream)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}>
-                  <img src={asset(product.image || "/images/products/raw-almonds-product.png")} alt={product.name} style={{ maxHeight: '100%' }} />
+                  <img src={asset(product.image)} alt={product.name} style={{ maxHeight: '100%', objectFit: 'contain' }} />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">{product.name}</h3>
                   <p className="card-text">{product.tagline}</p>
-                  <div className="card-footer">
+                  <div className="card-footer" style={{ marginTop: 'auto' }}>
                     <span className="price">{product.price}</span>
                     <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary">Buy on Amazon</a>
                   </div>
@@ -121,6 +114,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </>
   )
 }
