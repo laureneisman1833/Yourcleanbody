@@ -40,7 +40,7 @@ export default function Home() {
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
               <img 
                 src={asset("/images/hero/clean-bodies-hero-portrait.png")} 
-                alt="Lauren Eisman — Clean Living Specialist" 
+                alt="Clean wellness essentials on a warm kitchen counter" 
                 style={{ width: '100%', height: 'auto', display: 'block' }} 
               />
             </div>
