@@ -121,21 +121,58 @@ export default function Home() {
                 </a>
               </div>
 
-              <div style={{ background: 'white', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
-                <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>Antioxidant Research</span>
-                <h3 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-sm)', fontSize: '1.125rem' }}>
-                  Glutathione and Detoxification Research
-                </h3>
-                <p style={{ color: 'var(--text-medium)', lineHeight: 1.7, marginBottom: 'var(--space-md)' }}>
-                  Glutathione — often called the body's master antioxidant — plays a central role in liver detoxification and cellular protection. Research consistently shows it can be supported through targeted nutrition.
-                </p>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)', paddingLeft: 0, listStyle: 'none' }}>
-                  {['Neutralizes reactive oxygen species',
-                    'Supports liver detoxification and Phase II conjugation',
-                    'Protects cells from oxidative damage',
-                    'Supported by cysteine, glycine, selenium, B6, magnesium and plant compounds'].map((point, i) => (
-                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
-                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>{point}
-                    </li>
-                  ))}
-                
+                          </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ backgroundColor: 'var(--color-sage-light)' }}>
+        <div className="container">
+          <div className="grid grid-3">
+            <div style={{ textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Certified and Curated</h3>
+              <p>Vetted by a specialist. No hidden toxins.</p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Family-First</h3>
+              <p>Safe for you and your loved ones.</p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--color-forest-dark)' }}>Authentic Results</h3>
+              <p>Focus on gentle, effective cleansing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Pantry and Skincare Essentials</h2>
+          <div className="grid grid-3">
+            {featuredProducts.map(product => (
+              <div className="card" key={product.id}>
+                <div className="card-image" style={{ background: 'var(--color-cream)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}>
+                  <img src={asset(product.image)} alt={product.name} style={{ maxHeight: '100%', objectFit: 'contain' }} />
+                </div>
+                <div className="card-body">
+                  <h3 className="card-title">{product.name}</h3>
+                  <p className="card-text">{product.tagline}</p>
+                  <div className="card-footer" style={{ marginTop: 'auto' }}>
+                    <span className="price">{product.price}</span>
+                    <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary">Buy on Amazon</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
+            <Link to="/shop" className="btn btn-secondary">View All Products</Link>
+          </div>
+        </div>
+      </section>
+
+    </>
+  )
+}
+
+                    
