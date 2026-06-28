@@ -24,7 +24,7 @@ export const products = [
     tagline: 'Deeply nourishing, non-toxic moisturizer',
     price: '38.00',
     amazonUrl: 'https://amzn.to/4dSQP0C',
-    image: '/images/products/IMG_1240.png',
+    image: '/images/products/IMG_1239.png',
     description: 'Deeply nourishing, non-toxic moisturizer for healthy skin. A natural alternative to synthetic lotions, rich in vitamins and minerals.',
     features: [
       '100% grass-fed tallow',
