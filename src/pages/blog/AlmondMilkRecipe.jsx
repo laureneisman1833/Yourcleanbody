@@ -180,7 +180,7 @@ export default function AlmondMilkRecipe() {
               <div style={{ background: '#F5F0E8', borderRadius: '12px', padding: '24px', position: 'sticky', top: '96px' }}>
                 <h3 style={{ fontSize: '1.125rem', marginBottom: '16px', color: '#3D5A3E' }}>Shop Ingredients</h3>
                 <Link to="/shop/raw-almonds">
-                  <img src={asset("/images/products/raw-almonds-product.png")} alt="Raw Organic Almonds" style={{ width: '100%', borderRadius: '8px', marginBottom: '12px' }} />
+                  <img src={asset("/images/products/raw-almonds-3lb.png")} alt="Raw Organic Almonds" style={{ width: '100%', borderRadius: '8px', marginBottom: '12px' }} />
                 </Link>
                 <h4 style={{ fontSize: '1rem', marginBottom: '4px' }}>Raw Organic Almonds</h4>
                 <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.125rem', fontWeight: 600, color: '#3D5A3E' }}>$16.00 (2lb) / $34.00 (5lb)</p>
