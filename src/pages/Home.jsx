@@ -13,7 +13,6 @@ export default function Home() {
         description="Clean Isn't a Trend. It's What Your Body Was Designed to Be. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
       />
 
-      {/* Hero Section - The Founder's Story */}
       <section className="section" style={{ paddingTop: 'var(--space-2xl)', backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
           <div className="about-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-3xl)', alignItems: 'center' }}>
@@ -25,11 +24,11 @@ export default function Home() {
                 Designed to Be.
               </h1>
               <p style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
-                Clean Bodies was born from a simple belief: what you put on and in your body matters deeply. 
+                Clean Bodies was born from a simple belief: what you put on and in your body matters deeply.
                 After years of navigating confusing labels and hidden toxins, I realized there was a gap.
               </p>
               <p style={{ marginTop: 'var(--space-md)' }}>
-                Every product here is something I personally use and trust for my own family. 
+                Every product here is something I personally use and trust for my own family.
                 From the raw almonds I blend into milk to the skincare I trust on my own skin.
               </p>
               <div style={{ marginTop: 'var(--space-2xl)', display: 'flex', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
@@ -38,29 +37,28 @@ export default function Home() {
               </div>
             </div>
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
-              <img 
-                src={asset("/images/hero/clean-bodies-hero-portrait.png")} 
-                alt="Lauren Eisman — Clean Living Specialist" 
-                style={{ width: '100%', height: 'auto', display: 'block' }} 
+              <img
+                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
+                alt="Lauren Eisman — Clean Living Specialist"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Metabolic Detox Focus */}
       <section className="section" style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-xl)' }}>Understanding Metabolic Detoxification</h2>
-            <div className="metabolic-intro" style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7, textAlign: 'left' }}>
+            <div style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7, textAlign: 'left' }}>
               <p>
                 Metabolic detoxification is the body's natural process of transforming and eliminating waste products,
                 excess hormones, environmental toxins, and byproducts of metabolism through the liver, digestive system,
                 kidneys, skin, and lymphatic system.
               </p>
               <p style={{ marginTop: 'var(--space-md)' }}>
-                When the gut, liver, and lymphatic system are functioning optimally, many people find it easier to establish 
+                When the gut, liver, and lymphatic system are functioning optimally, many people find it easier to establish
                 healthy habits that support energy levels, body composition goals, and long-term wellness.
               </p>
             </div>
@@ -68,7 +66,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research Section */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
           <div style={{ maxWidth: '860px', margin: '0 auto' }}>
@@ -76,11 +73,9 @@ export default function Home() {
             <p style={{ textAlign: 'center', color: 'var(--text-medium)', marginBottom: 'var(--space-2xl)', fontSize: '1rem' }}>
               The science behind metabolic detoxification is well-established. Here are a few studies I return to often.
             </p>
-
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
 
-              {/* Study 1 */}
-              <div style={{ background: 'var(--white)', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
+              <div style={{ background: 'white', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
                 <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>2023 Clinical Study</span>
                 <h3 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-sm)', fontSize: '1.125rem' }}>
                   Guided Metabolic Detoxification Program Supports Phase II Detoxification Enzymes and Antioxidant Balance
@@ -88,16 +83,13 @@ export default function Home() {
                 <p style={{ color: 'var(--text-medium)', lineHeight: 1.7, marginBottom: 'var(--space-md)' }}>
                   Researchers followed healthy adults through a 28-day whole-food metabolic detoxification program and found significant improvements across key markers of detox function and antioxidant capacity.
                 </p>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)' }}>
-                  {[
-                    '13% increase in glutathione S-transferase (GST) activity — a major Phase II detoxification enzyme',
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)', paddingLeft: 0, listStyle: 'none' }}>
+                  {['13% increase in glutathione S-transferase (GST) activity — a major Phase II detoxification enzyme',
                     '~40% increase in total cellular antioxidant capacity',
                     'Significant reduction in reactive oxygen species (oxidative stress)',
-                    'Support of normal Phase II liver detoxification pathways without adverse effects',
-                  ].map((point, i) => (
-                    <li key={i} style={{ display: 'flex', gap: 'var(--space-sm)', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
-                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>
-                      {point}
+                    'Support of normal Phase II liver detoxification pathways without adverse effects'].map((point, i) => (
+                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
+                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>{point}
                     </li>
                   ))}
                 </ul>
@@ -106,6 +98,44 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Study 2 */}
-              <div style={{ background: 'var(--white)', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
-                <span className="badge" style={{ marginBottom: 'var(--space
+              <div style={{ background: 'white', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
+                <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>Scientific Review</span>
+                <h3 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-sm)', fontSize: '1.125rem' }}>
+                  Modulation of Metabolic Detoxification Pathways Using Foods and Food-Derived Components (2015)
+                </h3>
+                <p style={{ color: 'var(--text-medium)', lineHeight: 1.7, marginBottom: 'var(--space-md)' }}>
+                  This review summarizes decades of research showing that specific foods and nutrients can meaningfully influence detoxification enzymes and glutathione production.
+                </p>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)', paddingLeft: 0, listStyle: 'none' }}>
+                  {['Cruciferous vegetables (broccoli, kale, Brussels sprouts)',
+                    'Sulfur-containing amino acids',
+                    'Selenium and B vitamins',
+                    'Curcumin, milk thistle and alpha-lipoic acid'].map((point, i) => (
+                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
+                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>{point}
+                    </li>
+                  ))}
+                </ul>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4488002/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.875rem', color: 'var(--color-sage)', fontWeight: 600 }}>
+                  Read the full study → PMC4488002
+                </a>
+              </div>
+
+              <div style={{ background: 'white', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
+                <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>Antioxidant Research</span>
+                <h3 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-sm)', fontSize: '1.125rem' }}>
+                  Glutathione and Detoxification Research
+                </h3>
+                <p style={{ color: 'var(--text-medium)', lineHeight: 1.7, marginBottom: 'var(--space-md)' }}>
+                  Glutathione — often called the body's master antioxidant — plays a central role in liver detoxification and cellular protection. Research consistently shows it can be supported through targeted nutrition.
+                </p>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)', paddingLeft: 0, listStyle: 'none' }}>
+                  {['Neutralizes reactive oxygen species',
+                    'Supports liver detoxification and Phase II conjugation',
+                    'Protects cells from oxidative damage',
+                    'Supported by cysteine, glycine, selenium, B6, magnesium and plant compounds'].map((point, i) => (
+                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
+                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>{point}
+                    </li>
+                  ))}
+                
