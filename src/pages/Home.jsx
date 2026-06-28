@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="YourCleanBody.com | Clean Isn’t a Trend"
-        description="Clean Isn’t a Trend. It’s What Your Body Was Designed to Be. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
+        title="YourCleanBody.com | Clean Isn't a Trend"
+        description="Clean Isn't a Trend. It's What Your Body Was Designed to Be. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
       />
 
       {/* Hero Section - The Founder's Story */}
@@ -20,8 +20,8 @@ export default function Home() {
             <div>
               <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>The Heart of YourCleanBody</span>
               <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: 'var(--space-xl)', color: 'var(--color-forest)' }}>
-                Clean Isn’t a Trend. <br />
-                It’s What Your Body Was <br />
+                Clean Isn't a Trend. <br />
+                It's What Your Body Was <br />
                 Designed to Be.
               </h1>
               <p style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
@@ -68,53 +68,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Markers */}
-      <section className="section" style={{ backgroundColor: 'var(--color-sage-light)' }}>
+      {/* Research Section */}
+      <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
-          <div className="grid grid-3">
-            <div style={{ textAlign: 'center' }}>
-              <h3 style={{ color: 'var(--color-forest-dark)' }}>Certified & Curated</h3>
-              <p>Vetted by a specialist. No hidden toxins.</p>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <h3 style={{ color: 'var(--color-forest-dark)' }}>Family-First</h3>
-              <p>Safe for you and your loved ones.</p>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <h3 style={{ color: 'var(--color-forest-dark)' }}>Authentic Results</h3>
-              <p>Focus on gentle, effective cleansing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div style={{ maxWidth: '860px', margin: '0 auto' }}>
+            <h2 style={{ color: 'var(--color-forest)', textAlign: 'center', marginBottom: 'var(--space-sm)' }}>What the Research Shows</h2>
+            <p style={{ textAlign: 'center', color: 'var(--text-medium)', marginBottom: 'var(--space-2xl)', fontSize: '1rem' }}>
+              The science behind metabolic detoxification is well-established. Here are a few studies I return to often.
+            </p>
 
-      {/* Featured Products Snippet */}
-      <section className="section">
-        <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Pantry & Skincare Essentials</h2>
-          <div className="grid grid-3">
-            {featuredProducts.map(product => (
-              <div className="card" key={product.id}>
-                <div className="card-image" style={{ background: 'var(--color-cream)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px' }}>
-                  <img src={asset(product.image)} alt={product.name} style={{ maxHeight: '100%', objectFit: 'contain' }} />
-                </div>
-                <div className="card-body">
-                  <h3 className="card-title">{product.name}</h3>
-                  <p className="card-text">{product.tagline}</p>
-                  <div className="card-footer" style={{ marginTop: 'auto' }}>
-                    <span className="price">{product.price}</span>
-                    <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary">Buy on Amazon</a>
-                  </div>
-                </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
+
+              {/* Study 1 */}
+              <div style={{ background: 'var(--white)', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
+                <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>2023 Clinical Study</span>
+                <h3 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-sm)', fontSize: '1.125rem' }}>
+                  Guided Metabolic Detoxification Program Supports Phase II Detoxification Enzymes and Antioxidant Balance
+                </h3>
+                <p style={{ color: 'var(--text-medium)', lineHeight: 1.7, marginBottom: 'var(--space-md)' }}>
+                  Researchers followed healthy adults through a 28-day whole-food metabolic detoxification program and found significant improvements across key markers of detox function and antioxidant capacity.
+                </p>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)', marginBottom: 'var(--space-lg)' }}>
+                  {[
+                    '13% increase in glutathione S-transferase (GST) activity — a major Phase II detoxification enzyme',
+                    '~40% increase in total cellular antioxidant capacity',
+                    'Significant reduction in reactive oxygen species (oxidative stress)',
+                    'Support of normal Phase II liver detoxification pathways without adverse effects',
+                  ].map((point, i) => (
+                    <li key={i} style={{ display: 'flex', gap: 'var(--space-sm)', color: 'var(--text-dark)', fontSize: '0.9375rem' }}>
+                      <span style={{ color: 'var(--color-herb-green)', fontWeight: 600, flexShrink: 0 }}>✓</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10181083/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.875rem', color: 'var(--color-sage)', fontWeight: 600 }}>
+                  Read the full study → PMC10181083
+                </a>
               </div>
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
-            <Link to="/shop" className="btn btn-secondary">View All Products</Link>
-          </div>
-        </div>
-      </section>
 
-    </>
-  )
-}
+              {/* Study 2 */}
+              <div style={{ background: 'var(--white)', borderRadius: 'var(--radius-md)', padding: 'var(--space-xl)', boxShadow: 'var(--shadow-sm)' }}>
+                <span className="badge" style={{ marginBottom: 'var(--space
