@@ -96,7 +96,10 @@ export const products = [
     tagline: 'Supports liver detoxification',
     price: '19.99',
     amazonUrl: 'https://www.amazon.com/dp/B0G62WB1F6/ref=cm_sw_r_as_gl_api_gl_i_EXDS00G1RS5SYEA6TNWW?linkCode=ml1&tag=cleanbodies10-20&linkId=42e07df5bad0769b25115c597cb65927',
-    image: '/images/products/wellness-product.png',
+    image: '/images/products/IMG_1622.jpeg',
+ 
+    
+
     description: 'Supports liver detoxification and overall wellness. A high-quality extract for those serious about gentle cleansing.',
     features: [
       'Oxygenated formula',
@@ -114,7 +117,8 @@ export const products = [
     tagline: 'Essential for making almond milk',
     price: '12.00',
     amazonUrl: 'https://amzn.to/4osCeMX',
-    image: '/images/products/wellness-product.png',
+    image: '/images/products/IMG_1624.jpeg',
+
     description: 'Essential for making homemade almond milk. Reusable and durable cheesecloth that ensures a smooth, pulp-free result every time.',
     features: [
       'Fine mesh cheesecloth',
