@@ -39,7 +39,8 @@ export default function Contact() {
                   <div className="contact-method-icon">📧</div>
                   <div className="contact-method-text">
                     <h4>Email</h4>
-                    <p>hello@cleanbodies.com<br />We respond within 24 hours</p>
+                <p>cleanbodiesSOS@gmail.com<br />We respond within 24 hours</p>
+  
                   </div>
                 </div>
 
