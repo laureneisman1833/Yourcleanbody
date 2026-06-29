@@ -37,7 +37,8 @@ export default function Footer() {
           <div>
             <h4 className="footer-heading">Connect</h4>
             <ul className="footer-links">
-              <li><a href="mailto:hello@cleanbodies.com">hello@cleanbodies.com</a></li>
+            <li><a href="mailto:cleanbodiesSOS@gmail.com">cleanbodiesSOS@gmail.com</a></li>
+
               <li><a href="#instagram">Instagram</a></li>
               <li><a href="#facebook">Facebook</a></li>
               <li><a href="#pinterest">Pinterest</a></li>
