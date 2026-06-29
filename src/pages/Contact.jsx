@@ -131,7 +131,8 @@ export default function Contact() {
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/shop" className="btn btn-primary">Browse Products</Link>
-            <a href="mailto:hello@cleanbodies.com" className="btn btn-secondary">Email Us Directly</a>
+        <a href="mailto:cleanbodiesSOS@gmail.com" className="btn btn-secondary">Email Us Directly</a>
+ 
           </div>
         </div>
       </section>
