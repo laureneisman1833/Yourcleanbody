@@ -125,6 +125,25 @@ export const products = [
     ],
     badge: 'Kitchen',
   },
+    {
+    id: 'digestive-enzymes',
+    category: 'digestion',
+    name: 'Zenwise Digestive Enzymes',
+    tagline: 'Daily digestive support',
+    price: '19.57',
+    amazonUrl: 'https://amzn.to/4vF2h6x',
+    image: '/images/products/IMG_1671.jpeg',
+    description: 'Supports digestion & regularity, promotes a healthy gut microbiome, and enhances nutrient absorption. Formulated with both prebiotics and probiotics for comprehensive digestive support.',
+    features: [
+      'Supports digestion & regularity',
+      'Promotes healthy gut microbiome',
+      'Enhances nutrient absorption',
+      'Contains prebiotics & probiotics',
+      '180 capsules'
+    ],
+    badge: 'Digestion',
+  },
+
 ]
 
 export const categories = [
