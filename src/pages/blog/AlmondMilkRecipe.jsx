@@ -183,9 +183,9 @@ export default function AlmondMilkRecipe() {
                   <img src={asset("/images/products/raw-almonds-product.png")} alt="Raw Organic Almonds" style={{ width: '100%', borderRadius: '8px', marginBottom: '12px' }} />
                 </Link>
                 <h4 style={{ fontSize: '1rem', marginBottom: '4px' }}>Raw Organic Almonds</h4>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.125rem', fontWeight: 600, color: '#3D5A3E' }}>$16.00 (2lb) / $34.00 (5lb)</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.125rem', fontWeight: 600, color: '#3D5A3E' }}>See current price on Amazon</p>
                 <Link to="/shop/raw-almonds" className="btn btn-primary" style={{ display: 'block', textAlign: 'center', marginTop: '12px' }}>
-                  Shop Now
+                  View Current Price
                 </Link>
               </div>
             </aside>

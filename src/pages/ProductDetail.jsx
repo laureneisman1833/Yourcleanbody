@@ -53,7 +53,7 @@ export default function ProductDetail() {
               {product.badge && <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>{product.badge}</span>}
               <h1>{product.name}</h1>
               <p style={{ color: 'var(--text-medium)', fontSize: '1.125rem', marginTop: 'var(--space-sm)' }}>{product.tagline}</p>
-              <div style={{ margin: 'var(--space-lg) 0' }}><span className="price">{product.price}</span></div>
+              <div style={{ margin: 'var(--space-lg) 0' }}><span className="price">See current price on Amazon</span></div>
               <p style={{ color: 'var(--text-dark)', lineHeight: 1.7 }}>{product.description}</p>
 
               <div style={{ marginTop: 'var(--space-lg)', padding: 'var(--space-md)', background: 'var(--color-cream)', borderRadius: 'var(--radius-sm)' }}>

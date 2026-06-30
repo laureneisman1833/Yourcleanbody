@@ -158,7 +158,7 @@ export default function Home() {
                   <h3 className="card-title">{product.name}</h3>
                   <p className="card-text">{product.tagline}</p>
                   <div className="card-footer" style={{ marginTop: 'auto' }}>
-                    <span className="price">{product.price}</span>
+                    <span className="price">See current price on Amazon</span>
                     <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary">Buy on Amazon</a>
                   </div>
                 </div>
