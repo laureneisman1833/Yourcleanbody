@@ -49,7 +49,7 @@ export default function Shop() {
                   </div>
 
                   <div className="card-footer">
-                    <span className="price">{product.price}</span>
+                    <span className="price">See current price</span>
                     <a 
                       href={product.amazonUrl} 
                       target="_blank" 
