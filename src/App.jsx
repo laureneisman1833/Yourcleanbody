@@ -22,6 +22,8 @@ function App() {
           <Route path="/shop/:productId" element={<ProductDetail />} />
           <Route path="/about" element={<Navigate to="/" replace />} />
           <Route path="/personalized-reset" element={<ResetPlan />} />
+          <Route path="/wellness-club" element={<WellnessClub />} />
+
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/blog/how-to-make-almond-milk" element={<AlmondMilkRecipe />} />
           <Route path="/contact" element={<Contact />} />
