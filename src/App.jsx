@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import AlmondMilkRecipe from './pages/blog/AlmondMilkRecipe'
 import MetabolicDetox from './pages/MetabolicDetox'
 import ResetPlan from './pages/ResetPlan'
+import WellnessClub from './pages/WellnessClub'
 
 function App() {
   return (
