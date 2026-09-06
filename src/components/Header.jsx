@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { asset } from '../utils/assets'
+import { playWellnessClubChime } from '../utils/sound'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
