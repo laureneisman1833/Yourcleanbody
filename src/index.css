@@ -1,8 +1,7 @@
 /* ===== Clean Bodies — Brand Design System ===== */
 
 /* Import Google Fonts via @import as fallback */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap');
 /* ===== CSS Custom Properties (Design Tokens) ===== */
 :root {
   /* Colors - Primary */
