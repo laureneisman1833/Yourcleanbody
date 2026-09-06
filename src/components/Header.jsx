@@ -40,8 +40,13 @@ export default function Header() {
             <NavLink to="/shop" className={linkClass} onClick={closeMenu}>Shop</NavLink>
             <NavLink to="/personalized-reset" className={linkClass} onClick={closeMenu}>7-Day Reset</NavLink>
             <NavLink to="/metabolic-detoxification" className={linkClass} onClick={closeMenu}>Metabolic Detox</NavLink>
-            <NavLink to="/wellness-club" className={linkClass} onClick={closeMenu}>Wellness Club</NavLink>
-
+            <NavLink
+              to="/wellness-club"
+              className={linkClass}
+              onClick={() => { closeMenu(); playWellnessClubChime(); }}
+            >
+              Wellness Club
+            </NavLink>
             <NavLink to="/blog/how-to-make-almond-milk" className={linkClass} onClick={closeMenu}>Almond Milk Recipe</NavLink>
             <NavLink to="/contact" className={linkClass} onClick={closeMenu}>Contact</NavLink>
           </div>
