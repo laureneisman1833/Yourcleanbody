@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="YourCleanBody.com | Clean Isn't a Trend"
-        description="Clean Isn't a Trend. It's What Your Body Was Designed to Be. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
+        title="YourCleanBody.com | Clean Living Isn't a Trend"
+        description="Clean Living Isn't a Trend. It's How I Heal. Understanding metabolic detoxification — how the body naturally eliminates waste and supports lasting wellness."
       />
 
       <section className="section" style={{ paddingTop: 'var(--space-2xl)', backgroundColor: 'var(--color-cream)' }}>
@@ -19,17 +19,15 @@ export default function Home() {
             <div>
               <span className="badge" style={{ marginBottom: 'var(--space-md)' }}>The Heart of YourCleanBody</span>
               <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: 'var(--space-xl)', color: 'var(--color-forest)' }}>
-                Clean Isn't a Trend. <br />
-                It's What Your Body Was <br />
-                Designed to Be.
+                Clean Living Isn't a Trend. <br />
+                It's How I Heal.
               </h1>
               <p style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
-                Clean Bodies was born from a simple belief: what you put on and in your body matters deeply.
-                After years of navigating confusing labels and hidden toxins, I realized there was a gap.
+                I founded Clean Bodies Wellness back in 2012, out of a simple, heartfelt commitment to metabolic health.
+                Since then, I rebuilt it from the ground up after raising my own child, and that experience gave me even more warmth, patience, and real world clarity about what "clean" actually means for busy families like mine.
               </p>
               <p style={{ marginTop: 'var(--space-md)' }}>
-                Every product here is something I personally use and trust for my own family.
-                From the raw almonds I blend into milk to the skincare I trust on my own skin.
+                With nearly 15 years as a certified detox specialist and a background in Nutritional Sciences, everything I share here comes from real physiology, not fads or guesswork.
               </p>
               <div style={{ marginTop: 'var(--space-2xl)', display: 'flex', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
                 <Link to="/personalized-reset" className="btn btn-primary">Start Your 7-Day Reset</Link>
@@ -43,6 +41,16 @@ export default function Home() {
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ backgroundColor: 'var(--white)' }}>
+        <div className="container">
+          <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
+              In recent years, I've watched more and more brands spring up around clean living and detoxification, and honestly, I think that's a good thing. It's a sign that people are waking up. Our food supply has become increasingly compromised, and more of us are dealing with symptoms that didn't used to be so common. When an idea is truly life changing, it spreads. I believe now is the moment for all of us to take our health back into our own hands, and I'm glad to have company in that mission. I believe clean living should be accessible, evidence informed, and sustainable, not restrictive or extreme. That's the standard behind everything I share here.
+            </p>
           </div>
         </div>
       </section>
@@ -174,5 +182,3 @@ export default function Home() {
     </>
   )
 }
-
-                    
