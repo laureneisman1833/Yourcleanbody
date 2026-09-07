@@ -75,4 +75,22 @@ export default function Home() {
               more of us are dealing with symptoms that didn't used to be so common. When an idea is truly life
               changing, it spreads.
             </p>
-            
+            <p style={{ marginTop: 'var(--space-md)', fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7 }}>
+              Now is the moment to take health back into your own hands. Clean living should be accessible, evidence
+              informed, and sustainable, not restrictive or extreme. That's the standard behind everything shared here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ backgroundColor: 'var(--white)' }}>
+        <div className="container">
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ color: 'var(--color-forest)', marginBottom: 'var(--space-xl)' }}>Understanding Metabolic Detoxification</h2>
+            <div style={{ fontSize: '1.125rem', color: 'var(--text-dark)', lineHeight: 1.7, textAlign: 'left' }}>
+              <p>
+                Metabolic detoxification is the body's natural process of transforming and eliminating waste products,
+                excess hormones, environmental toxins, and byproducts of metabolism through the liver, digestive system,
+                kidneys, skin, and lymphatic system.
+              </p>
+              
