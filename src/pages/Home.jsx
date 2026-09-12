@@ -34,7 +34,7 @@ export default function Home() {
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
               <img
                 src={asset("/images/hero/clean-bodies-hero-portrait.png")}
-                alt="Lauren Eisman — Clean Living Specialist"
+                alt="Fresh, whole foods transforming into time and health for your family"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
