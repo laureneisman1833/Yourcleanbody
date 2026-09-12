@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
               <img
-                src={asset("/images/hero/clean-bodies-hero-portrait.png")}
+                                src={asset("/images/hero/69ff67f9-c15a-44d9-a70c-b2a443c4d09f.png")}
                 alt="Fresh, whole foods transforming into time and health for your family"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
